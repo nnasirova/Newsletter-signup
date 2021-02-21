@@ -10,7 +10,9 @@ app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended:true}));
 
 app.get("/", function(req, res) {
+  console.log(__dirname);
   res.sendFile(__dirname + "/signup.html");
+
 })
 app.post("/", function(req, res) {
   const firstName = req.body.fName;
@@ -36,7 +38,7 @@ app.post("/", function(req, res) {
 
   const options = {
     method: "POST",
-    auth: "nigina1:bb1356fe39e456fe98c06ac168491c97-us"
+    auth: "nigina1:bb1356fe39e456fe98c06ac168491c97-us7"
   }
 
 const request = https.request(url, options, function(response) {
